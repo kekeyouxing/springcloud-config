@@ -54,6 +54,6 @@ secure:
       - /druid/**
       - /admin/login
       - /admin/register
-      - /admin/info
+      - /admin/info/*
       - /admin/logout
       - /minio/upload
