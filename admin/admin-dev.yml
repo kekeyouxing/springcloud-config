@@ -11,7 +11,6 @@ spring:
 mybatis:
   typeAliasesPackage: com.macro.mall
   mapper-locations:
-    - classpath:dao/*.xml
     - classpath*:com/**/mapper/*.xml
 management: #开启SpringBoot Admin的监控
   endpoints:
