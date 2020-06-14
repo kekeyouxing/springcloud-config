@@ -39,3 +39,47 @@ secure:
       - /system/user/info/*
       - /admin/logout
       - /minio/upload
+    
+feign:
+  hystrix:
+    enabled: true
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          thread:
+            timeoutInMilliseconds: 60000
+  shareSecurityContext: true
+ribbon:
+  eureka:
+    enabled: true
+logging:
+  level: #修改日志级别
+    com.macro.cloud.service.UserService: debug
+
+
+security:
+  oauth2:
+    client:
+      client-id: mall
+      client-secret: admin123
+      scope: server
+    resource:
+      loadBalanced: true
+      token-info-uri: http://mall-auth/oauth/check_token
