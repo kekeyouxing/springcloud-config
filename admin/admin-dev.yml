@@ -23,22 +23,22 @@ management: #开启SpringBoot Admin的监控
 secure:
   ignored:
     urls: #安全路径白名单
-      - /swagger-ui.html
-      - /swagger-resources/**
-      - /swagger/**
-      - /**/v2/api-docs
-      - /**/*.js
-      - /**/*.css
-      - /**/*.png
-      - /**/*.ico
-      - /webjars/springfox-swagger-ui/**
-      - /actuator/**
-      - /druid/**
-      - /system/login
-      - /system/register
-      - /system/user/info/*
-      - /admin/logout
-      - /minio/upload
+      /swagger-ui.html
+      /swagger-resources/**
+      /swagger/**
+      /**/v2/api-docs
+      /**/*.js
+      /**/*.css
+      /**/*.png
+      /**/*.ico
+      /webjars/springfox-swagger-ui/**
+      /actuator/**
+      /druid/**
+      /system/login
+      /system/register
+      /system/user/info/*
+      /admin/logout
+      /minio/upload
     
 feign:
   hystrix:
